@@ -4,7 +4,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { BottomTabBar } from '@/components/BottomTabBar';
 import { View } from 'react-native';
 import { useFonts, PlayfairDisplay_400Regular, PlayfairDisplay_500Medium, PlayfairDisplay_600SemiBold, PlayfairDisplay_700Bold } from '@expo-google-fonts/playfair-display';
@@ -27,13 +27,9 @@ function RootLayoutNav() {
     PlayfairDisplay_600SemiBold,
     PlayfairDisplay_700Bold,
   });
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-
-  // Preload category images on app start
+  // Preload category images in background (non-blocking)
   useEffect(() => {
-    preloadCategoryImages().then(() => {
-      setImagesLoaded(true);
-    });
+    preloadCategoryImages().catch(() => {});
   }, []);
 
   // Initialize notification listener
@@ -45,15 +41,12 @@ function RootLayoutNav() {
   }, []);
 
   useEffect(() => {
-    if (fontsLoaded && imagesLoaded) {
-      const timer = setTimeout(() => {
-        SplashScreen.hideAsync();
-      }, 500);
-      return () => clearTimeout(timer);
+    if (fontsLoaded) {
+      SplashScreen.hideAsync();
     }
-  }, [fontsLoaded, imagesLoaded]);
+  }, [fontsLoaded]);
 
-  if (!fontsLoaded || !imagesLoaded) {
+  if (!fontsLoaded) {
     return null;
   }
 
