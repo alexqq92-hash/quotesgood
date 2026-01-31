@@ -1,0 +1,178 @@
+export interface Theme {
+  id: string;
+  name: string;
+  gradientColors: readonly [string, string, string];
+  textColor: string;
+  secondaryTextColor: string;
+  accentColor: string;
+  iconColor: string;
+  group: 'galaxy' | 'pastel';
+}
+
+export const themes: Theme[] = [
+  {
+    id: 'midnight',
+    name: 'Midnight',
+    gradientColors: ['#0f0c29', '#302b63', '#24243e'],
+    textColor: '#ffffff',
+    secondaryTextColor: 'rgba(255,255,255,0.6)',
+    accentColor: '#a78bfa',
+    iconColor: 'rgba(255,255,255,0.8)',
+    group: 'galaxy',
+  },
+  {
+    id: 'sunset',
+    name: 'Sunset',
+    gradientColors: ['#f12711', '#f5af19', '#f12711'],
+    textColor: '#ffffff',
+    secondaryTextColor: 'rgba(255,255,255,0.7)',
+    accentColor: '#fbbf24',
+    iconColor: 'rgba(255,255,255,0.9)',
+    group: 'galaxy',
+  },
+  {
+    id: 'ocean',
+    name: 'Ocean',
+    gradientColors: ['#1a2a6c', '#2a5298', '#1e3c72'],
+    textColor: '#ffffff',
+    secondaryTextColor: 'rgba(255,255,255,0.6)',
+    accentColor: '#38bdf8',
+    iconColor: 'rgba(255,255,255,0.8)',
+    group: 'galaxy',
+  },
+  {
+    id: 'forest',
+    name: 'Forest',
+    gradientColors: ['#134e5e', '#4a7c59', '#1d4a3e'],
+    textColor: '#ffffff',
+    secondaryTextColor: 'rgba(255,255,255,0.6)',
+    accentColor: '#86efac',
+    iconColor: 'rgba(255,255,255,0.8)',
+    group: 'galaxy',
+  },
+  {
+    id: 'rose',
+    name: 'Rose',
+    gradientColors: ['#4a1942', '#8e2d5c', '#4a1942'],
+    textColor: '#ffffff',
+    secondaryTextColor: 'rgba(255,255,255,0.6)',
+    accentColor: '#fb7185',
+    iconColor: 'rgba(255,255,255,0.8)',
+    group: 'galaxy',
+  },
+  {
+    id: 'aurora',
+    name: 'Aurora',
+    gradientColors: ['#0f2027', '#203a43', '#2c5364'],
+    textColor: '#ffffff',
+    secondaryTextColor: 'rgba(255,255,255,0.6)',
+    accentColor: '#22d3ee',
+    iconColor: 'rgba(255,255,255,0.8)',
+    group: 'galaxy',
+  },
+  {
+    id: 'dawn',
+    name: 'Dawn',
+    gradientColors: ['#2c3e50', '#4ca1af', '#2c3e50'],
+    textColor: '#ffffff',
+    secondaryTextColor: 'rgba(255,255,255,0.6)',
+    accentColor: '#fcd34d',
+    iconColor: 'rgba(255,255,255,0.8)',
+    group: 'galaxy',
+  },
+  {
+    id: 'lavender',
+    name: 'Lavender',
+    gradientColors: ['#3d2e5c', '#5b4a7d', '#3d2e5c'],
+    textColor: '#ffffff',
+    secondaryTextColor: 'rgba(255,255,255,0.6)',
+    accentColor: '#c4b5fd',
+    iconColor: 'rgba(255,255,255,0.8)',
+    group: 'galaxy',
+  },
+  {
+    id: 'blush',
+    name: 'Blush',
+    gradientColors: ['#FAE8E8', '#F5D6D6', '#FAE8E8'],
+    textColor: '#4A3636',
+    secondaryTextColor: 'rgba(74,54,54,0.6)',
+    accentColor: '#D4A5A5',
+    iconColor: 'rgba(74,54,54,0.8)',
+    group: 'pastel',
+  },
+  {
+    id: 'sky',
+    name: 'Sky',
+    gradientColors: ['#EBF6FA', '#D6EEF5', '#EBF6FA'],
+    textColor: '#2D4A52',
+    secondaryTextColor: 'rgba(45,74,82,0.6)',
+    accentColor: '#7BB5C7',
+    iconColor: 'rgba(45,74,82,0.8)',
+    group: 'pastel',
+  },
+  {
+    id: 'pearl',
+    name: 'Pearl',
+    gradientColors: ['#F7F4F8', '#EDE6F0', '#F7F4F8'],
+    textColor: '#4A4452',
+    secondaryTextColor: 'rgba(74,68,82,0.6)',
+    accentColor: '#A89CB0',
+    iconColor: 'rgba(74,68,82,0.8)',
+    group: 'pastel',
+  },
+  {
+    id: 'nude',
+    name: 'Nude',
+    gradientColors: ['#DBC9C4', '#CDBAB4', '#DBC9C4'],
+    textColor: '#4A3D38',
+    secondaryTextColor: 'rgba(74,61,56,0.6)',
+    accentColor: '#A08379',
+    iconColor: 'rgba(74,61,56,0.8)',
+    group: 'pastel',
+  },
+  {
+    id: 'lilac',
+    name: 'Lilac',
+    gradientColors: ['#DFC8EF', '#D0B5E3', '#DFC8EF'],
+    textColor: '#3D2E4A',
+    secondaryTextColor: 'rgba(61,46,74,0.6)',
+    accentColor: '#9B7BB5',
+    iconColor: 'rgba(61,46,74,0.8)',
+    group: 'pastel',
+  },
+  {
+    id: 'mint',
+    name: 'Mint',
+    gradientColors: ['#A8D5BA', '#96C9AA', '#A8D5BA'],
+    textColor: '#2D4A38',
+    secondaryTextColor: 'rgba(45,74,56,0.6)',
+    accentColor: '#5A9E70',
+    iconColor: 'rgba(45,74,56,0.8)',
+    group: 'pastel',
+  },
+  {
+    id: 'lemon',
+    name: 'Lemon',
+    gradientColors: ['#FFFDE7', '#FFF9C4', '#FFFDE7'],
+    textColor: '#5D5A3D',
+    secondaryTextColor: 'rgba(93,90,61,0.6)',
+    accentColor: '#D4C85A',
+    iconColor: 'rgba(93,90,61,0.8)',
+    group: 'pastel',
+  },
+  {
+    id: 'aqua',
+    name: 'Aqua',
+    gradientColors: ['#E8F6F5', '#D4EFED', '#E8F6F5'],
+    textColor: '#2D4A48',
+    secondaryTextColor: 'rgba(45,74,72,0.6)',
+    accentColor: '#6BB5B0',
+    iconColor: 'rgba(45,74,72,0.8)',
+    group: 'pastel',
+  },
+];
+
+export const galaxyThemes = themes.filter(t => t.group === 'galaxy');
+export const pastelThemes = themes.filter(t => t.group === 'pastel');
+
+export const DEFAULT_THEME_ID = 'midnight';
